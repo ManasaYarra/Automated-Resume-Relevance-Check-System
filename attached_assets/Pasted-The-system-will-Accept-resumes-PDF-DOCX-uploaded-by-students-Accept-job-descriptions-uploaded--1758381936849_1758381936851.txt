@@ -1,0 +1,51 @@
+The system will:
+Accept resumes (PDF/DOCX) uploaded by students.
+Accept job descriptions uploaded by the placement team.
+Use text extraction + embeddings to compare resume content with job descriptions.
+Run hybrid scoring:
+Hard match (keywords, skills, education)
+Soft match (semantic fit via embeddings + LLM reasoning)
+Output a Relevance Score, Missing Elements, and Verdict.
+Store results for the placement team in a searchable web application dashboard.
+This approach ensures both speed (hard checks) and contextual understanding (LLM-powered checks).
+Workflow
+Job Requirement Upload - Placement team uploads job description (JD).
+Resume Upload - Students upload resumes while applying.
+Resume Parsing
+Extract raw text from PDF/DOCX.
+Standardize formats (remove headers/footers, normalize sections).
+JD Parsing
+Extract role title, must-have skills, good-to-have skills, qualifications.
+Relevance Analysis
+Step 1: Hard Match – keyword & skill check (exact and fuzzy matches).
+Step 2: Semantic Match – embedding similarity between resume and JD using LLMs.
+Step 3: Scoring & Verdict – Weighted scoring formula for final score.
+Output Generation
+Relevance Score (0–100).
+Missing Skills/Projects/Certifications.
+Verdict (High / Medium / Low suitability).
+Suggestions for student improvement.
+Storage & Access
+Results stored in the database.
+The placement team can search/filter resumes by job role, score, and location.
+Web Application
+Placement team dashboard: upload JD, see shortlisted resumes.
+Tech Stack (Core Resume Parsing, AI Framework and Scoring Mechanism)
+Python – primary programming language.
+PyMuPDF / pdfplumber – extract text from PDFs.
+python-docx / docx2txt – extract text from DOCX.
+spaCy / NLTK – entity extraction, text normalization.
+LangChain – orchestration of LLM workflows.
+LangGraph – structured stateful pipelines for resume–JD analysis.
+LangSmith – observability, testing, and debugging of LLM chains.
+Vector Store (Chroma / FAISS / Pinecone) – for embeddings and semantic search.
+LLM Models – OpenAI GPT / Gemini / Claude / HuggingFace models for semantic matching & feedback generation.
+Keyword Matching – TF-IDF, BM25, fuzzy matching.
+Semantic Matching – embeddings + cosine similarity.
+Weighted Score – combine hard and soft matches into a final score.
+Tech Stack (Web Application) - You can choose other tech stack for FE
+Flask / FastAPI – Backend APIs to process uploads, run OMR evaluation, and serve results.
+Streamlit (MVP) – Frontend for evaluators (upload, dashboard, review).
+SQLite / PostgreSQL – Database for storing results, metadata, and audit logs.
+
+

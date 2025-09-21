@@ -27,6 +27,12 @@ def main():
         page_icon="🎯",
         layout="wide"
     )
+    import streamlit as st
+
+st.title("Test Streamlit app")
+
+st.write("If you see this message, Streamlit started correctly!")
+
     print("Starting app.py")
 import streamlit as st
 st.write("App is starting...")

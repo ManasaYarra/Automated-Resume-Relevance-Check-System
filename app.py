@@ -42,8 +42,8 @@ st.write("App is starting...")
 st.title("Automated Resume Relevance Check System")
 st.write("App is running successfully!")
 
-    st.title("🎯 AI-Powered Resume Matching System")
-    st.markdown("**Intelligent resume-job description matching for placement teams**")
+st.title("🎯 AI-Powered Resume Matching System")
+st.markdown("**Intelligent resume-job description matching for placement teams**")
     
     # Initialize components
     db, parser, ai_analyzer, scoring_engine = initialize_components()

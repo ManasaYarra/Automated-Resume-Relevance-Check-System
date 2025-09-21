@@ -20,30 +20,15 @@ def initialize_components():
     ai_analyzer = AIAnalyzer()
     scoring_engine = ScoringEngine()
     return db, parser, ai_analyzer, scoring_engine
-
 def main():
     st.set_page_config(
         page_title="AI Resume Matcher",
         page_icon="🎯",
         layout="wide"
     )
-    import streamlit as st
 
-st.title("Test Streamlit app")
-
-st.write("If you see this message, Streamlit started correctly!")
-
-print("Starting app.py")
-import streamlit as st
-st.write("App is starting...")
-
-    import streamlit as st
-
-st.title("Automated Resume Relevance Check System")
-st.write("App is running successfully!")
-
-st.title("🎯 AI-Powered Resume Matching System")
-st.markdown("**Intelligent resume-job description matching for placement teams**")
+    st.title("🎯 AI-Powered Resume Matching System")
+    st.markdown("**Intelligent resume-job description matching for placement teams**")
     
     # Initialize components
     db, parser, ai_analyzer, scoring_engine = initialize_components()
@@ -51,7 +36,7 @@ st.markdown("**Intelligent resume-job description matching for placement teams**
     # Sidebar navigation
     st.sidebar.title("Navigation")
     page = st.sidebar.selectbox(
-        "Select Page",
+     "Select Page",
         ["Job Description Upload", "Resume Analysis", "Dashboard", "Search Results"]
     )
     

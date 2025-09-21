@@ -29,17 +29,16 @@ def main():
 
     st.title("🎯 AI-Powered Resume Matching System")
     st.markdown("**Intelligent resume-job description matching for placement teams**")
-    
+
     # Initialize components
     db, parser, ai_analyzer, scoring_engine = initialize_components()
-    
+
     # Sidebar navigation
     st.sidebar.title("Navigation")
     page = st.sidebar.selectbox(
-     "Select Page",
+        "Select Page",
         ["Job Description Upload", "Resume Analysis", "Dashboard", "Search Results"]
     )
-    
     if page == "Job Description Upload":
         job_description_upload_page(db, parser)
     elif page == "Resume Analysis":

@@ -27,6 +27,10 @@ def main():
         page_icon="🎯",
         layout="wide"
     )
+    print("Starting app.py")
+import streamlit as st
+st.write("App is starting...")
+
     import streamlit as st
 
 st.title("Automated Resume Relevance Check System")

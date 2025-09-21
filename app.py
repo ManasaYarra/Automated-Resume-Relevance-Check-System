@@ -27,7 +27,11 @@ def main():
         page_icon="🎯",
         layout="wide"
     )
-    
+    import streamlit as st
+
+st.title("Automated Resume Relevance Check System")
+st.write("App is running successfully!")
+
     st.title("🎯 AI-Powered Resume Matching System")
     st.markdown("**Intelligent resume-job description matching for placement teams**")
     

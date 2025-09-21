@@ -27,8 +27,8 @@ def main():
         layout="wide"
     )
 
-    st.title("🎯 AI-Powered Resume Matching System")
-    st.markdown("**Intelligent resume-job description matching for placement teams**")
+st.title("🎯 AI-Powered Resume Matching System")
+st.markdown("**Intelligent resume-job description matching for placement teams**")
 
     # Initialize components
     db, parser, ai_analyzer, scoring_engine = initialize_components()
